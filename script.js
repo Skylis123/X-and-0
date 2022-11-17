@@ -49,55 +49,24 @@ function clickAction(id) {
     for (let i = 1; i <= 3; ++i) {
         if((usedButtons[i][1] == usedButtons[i][2]) && (usedButtons[i][2] == usedButtons[i][3]) && (usedButtons[i][1] != 0)) {
             winnerCheck = usedButtons[i][1];
-        } else {
-            winnerCheck = 0;
-        }
-        if (winnerCheck == 1) {
-            document.getElementById('winnerAnouncement').innerHTML="The Winner is X";
-            endGameCheck = 3;
-            break;
-        } else if (winnerCheck == 2) {
-            document.getElementById('winnerAnouncement').innerHTML="winner 0";
-            endGameCheck = 3;
-            break;
-        }
+        } 
     }
 
     for (let i = 1; i <= 3; ++i) {
         if((usedButtons[1][i] == usedButtons[2][i]) && (usedButtons[2][i] == usedButtons[3][i]) && (usedButtons[1][i] != 0)) {
             winnerCheck = usedButtons[1][i];
-        } else {
-            winnerCheck = 0;
-        }
-        if (winnerCheck == 1) {
-            document.getElementById('winnerAnouncement').innerHTML="The Winner is X";
-            endGameCheck = 3;
-            break;
-        } else if (winnerCheck == 2) {
-            document.getElementById('winnerAnouncement').innerHTML="The Winner is 0";
-            endGameCheck = 3;
-            break;
         }
     }
 
     if((usedButtons[1][1] == usedButtons[2][2]) && (usedButtons[2][2] == usedButtons[3][3]) && (usedButtons[1][1] != 0)) {
         winnerCheck = usedButtons[1][1];
-    } else {
-        winnerCheck = 0;
-    }
-    if (winnerCheck == 1) {
-        document.getElementById('winnerAnouncement').innerHTML="The Winner is X";
-        endGameCheck = 3;
-    } else if (winnerCheck == 2) {
-        document.getElementById('winnerAnouncement').innerHTML="The Winner is 0";
-        endGameCheck = 3;
     }
 
     if((usedButtons[1][3] == usedButtons[2][2]) && (usedButtons[2][2] == usedButtons[3][1]) && (usedButtons[1][3] != 0)) {
         winnerCheck = usedButtons[1][3];
-    } else {
-        winnerCheck = 0;
     }
+
+    
     if (winnerCheck == 1) {
         document.getElementById('winnerAnouncement').innerHTML="The Winner is X";
         endGameCheck = 3;
