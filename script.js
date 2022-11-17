@@ -66,7 +66,6 @@ function clickAction(id) {
         winnerCheck = usedButtons[1][3];
     }
 
-    
     if (winnerCheck == 1) {
         document.getElementById('winnerAnouncement').innerHTML="The Winner is X";
         endGameCheck = 3;
@@ -75,7 +74,7 @@ function clickAction(id) {
         endGameCheck = 3;
     }
     
-    if (x_0_evidence == 9) {
+    if (x_0_evidence == 9 && winnerCheck == 0) {
         document.getElementById('winnerAnouncement').innerHTML="Tie";
     }
 
