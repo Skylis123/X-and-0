@@ -1,4 +1,4 @@
-let x_0_evidence = 0; // keep the evidence of which turn it is and if it ends in a tie.
+let x_0_evidence; // keep the evidence of which turn it is and if it ends in a tie.
 let endGameCheck; // stops any action on the x and 0 buttons after a winner is declared (= 0 the game is still going / = 3 the game ended)
                   // does not allow to rerwrite a button that was already clicked
 
